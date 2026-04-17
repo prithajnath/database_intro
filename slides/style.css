@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Jersey+10&family=Space+Mono:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+:root {
+  --slidev-font-sans: 'Space Mono', monospace;
+  --slidev-font-mono: 'Space Mono', monospace;
+}
+
+* {
+  font-family: 'Space Mono', monospace !important;
+}
+
+.slidev-layout {
+  font-size: 0.82em;
+  overflow: hidden;
+}
+
+.slidev-layout table {
+  font-size: 0.9em;
+  width: 100%;
+  table-layout: fixed;
+  word-break: break-word;
+}
+
+h1, h2, h3, h4, h5, h6,
+.slidev-layout h1,
+.slidev-layout h2,
+.slidev-layout h3 {
+  font-family: 'Jersey 10', sans-serif !important;
+  letter-spacing: 0.03em;
+}

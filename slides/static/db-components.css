@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DBMS Architecture Diagram</title>
+<style>
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #f0f2f5;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  }
+
+  .diagram-container {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+  }
+
+  svg {
+    max-width: 100%;
+    height: auto;
+  }
+
+  /* CSS Styling for SVG Elements */
+  .text-title { font-size: 18px; fill: #333; text-anchor: middle; font-weight: bold; }
+  .text-label { font-size: 16px; fill: #333; text-anchor: middle; }
+  .text-small { font-size: 12px; fill: #555; text-anchor: middle; font-style: italic; }
+  
+  .cylinder { fill: transparent; stroke: #2c3e50; stroke-width: 2; }
+  .box { fill: #f8f9fa; stroke: #2c3e50; stroke-width: 2; rx: 4; }
+  .triangle { fill: transparent; stroke: #2c3e50; stroke-width: 2; }
+  
+  .line-main { stroke: #2c3e50; stroke-width: 2; fill: none; }
+  .arrow-line { stroke: #3498db; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+  .arrow-line-up { stroke: #3498db; stroke-width: 2; fill: none; marker-end: url(#arrowhead); }
+
+</style>
+</head>
+<body>
+
+<div class="diagram-container">
+  <svg width="400" height="850" viewBox="0 0 400 850" xmlns="http://www.w3.org/2000/svg">
+    <defs>
+      <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+        <polygon points="0 0, 10 3.5, 0 7" fill="#3498db" />
+      </marker>
+    </defs>
+
+    <text x="200" y="40" class="text-label">SQL Queries</text>
+    <line x1="200" y1="50" x2="200" y2="100" class="arrow-line" />
+
+    <ellipse cx="200" cy="120" rx="140" ry="25" class="cylinder" />
+    <text x="200" y="125" class="text-title">DBMS</text>
+    
+    <line x1="60" y1="120" x2="60" y2="650" class="line-main" />
+    <line x1="340" y1="120" x2="340" y2="650" class="line-main" />
+    
+    <path d="M 60 650 A 140 25 0 0 0 340 650" class="line-main" />
+    
+    <line x1="200" y1="145" x2="200" y2="170" class="arrow-line" />
+
+    <rect x="100" y="170" width="200" height="40" class="box" />
+    <text x="200" y="195" class="text-label">Query Rewrite</text>
+    
+    <line x1="200" y1="210" x2="200" y2="250" class="arrow-line" />
+    <text x="210" y="235" class="text-small" text-anchor="start">Relational Algebra</text>
+
+    <rect x="100" y="250" width="200" height="40" class="box" />
+    <text x="200" y="275" class="text-label">Query Optimizer</text>
+    
+    <line x1="200" y1="290" x2="200" y2="330" class="arrow-line" />
+    <text x="210" y="315" class="text-small" text-anchor="start">Query Plan</text>
+
+    <rect x="100" y="330" width="200" height="40" class="box" />
+    <text x="200" y="355" class="text-label">Query Executor</text>
+    
+    <line x1="200" y1="370" x2="200" y2="410" class="arrow-line" />
+    <text x="210" y="395" class="text-small" text-anchor="start">Data</text>
+
+    <rect x="90" y="410" width="220" height="50" class="box" />
+    <text x="200" y="440" class="text-label">Memory Buffer</text>
+
+    <polygon points="200,500 130,590 270,590" class="triangle" />
+    <text x="200" y="570" class="text-label">Index</text>
+    
+    <line x1="190" y1="500" x2="190" y2="460" class="arrow-line" /> <line x1="210" y1="460" x2="210" y2="500" class="arrow-line" /> <line x1="190" y1="590" x2="190" y2="700" class="arrow-line" /> <line x1="210" y1="700" x2="210" y2="590" class="arrow-line" /> <ellipse cx="200" cy="720" rx="70" ry="15" class="cylinder" />
+    
+    <line x1="130" y1="720" x2="130" y2="800" class="line-main" />
+    <line x1="270" y1="720" x2="270" y2="800" class="line-main" />
+    
+    <path d="M 130 800 A 70 15 0 0 0 270 800" class="line-main" />
+    <text x="200" y="770" class="text-title">Disk</text>
+
+  </svg>
+</div>
+
+</body>
+</html>
