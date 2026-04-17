@@ -296,6 +296,35 @@ Graph DBs, document stores, time-series DBs — they're all great for specific u
 </v-click>
 
 ---
+layout: image-right
+image: /wgaca.png
+---
+
+# The Relational Model Keeps Winning
+
+<div style="font-size:0.78em; line-height:1.6">
+
+Stonebraker & Pavlo, 2024 — _"What Goes Around Comes Around… And Around…"_
+
+The original 2005 paper reviewed 40 years of attempts to replace the relational model. The 2024 sequel covers the next 20: MapReduce, key-value stores, document DBs, column families, vector DBs, graph DBs.
+
+<v-click>
+
+The conclusion each time: **SQL absorbed the best ideas and survived.** Every "NoSQL will kill SQL" wave ended with the new system either adding SQL support or fading out.
+
+</v-click>
+
+<v-click>
+
+> _"The RM continues to be the dominant data model and SQL has been extended to capture the good ideas from others."_
+
+They had to write the paper twice because nobody listened the first time.
+
+</v-click>
+
+</div>
+
+---
 
 # SQL is Relational Algebra in Disguise
 
@@ -390,8 +419,6 @@ WHERE  e.salary > 100000</pre>
 </div>
 
 ---
-
-## layout: section
 
 # 04 — SQL
 
@@ -513,8 +540,6 @@ SQL is also the **lingua franca** — Postgres, Snowflake, BigQuery, Spark, Duck
 </v-click>
 
 ---
-
-## layout: section
 
 # 05 — OLAP vs OLTP
 
